@@ -7,8 +7,11 @@ import { HomeSection } from "@/app/components/section/home-section";
 import "swiper/css";
 import "swiper/css/pagination";
 import { AboutSection } from "./components/section/about-section";
+import { Nav } from "./components/nav";
+import { useState } from "react";
 
 export default function Home() {
+  const [slideIndex, setSlideIndex] = useState(0);
   return (
     <Swiper
       direction="vertical"
@@ -18,8 +21,12 @@ export default function Home() {
       keyboard={true}
       parallax={true}
       speed={800}
+      onSlideChange={(swiper) => {
+        setSlideIndex(swiper.activeIndex);
+      }}
       className="h-screen"
     >
+      <Nav slideIndex={slideIndex} />
       <SwiperSlide>
         <HomeSection />
       </SwiperSlide>
