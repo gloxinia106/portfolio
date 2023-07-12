@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .up-animation {
   transform: translateY(30px);
   opacity: 0;

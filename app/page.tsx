@@ -6,7 +6,7 @@ import { HomeSection } from "@/app/components/section/home-section";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { AboutSection } from "./components/section/about-section";
+import { ArchivingSection } from "./components/section/archiving-section";
 import { Nav } from "./components/nav";
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ export default function Home() {
         <HomeSection />
       </SwiperSlide>
       <SwiperSlide>
-        <AboutSection />
+        <ArchivingSection />
       </SwiperSlide>
       <SwiperSlide></SwiperSlide>
       <SwiperSlide></SwiperSlide>

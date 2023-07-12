@@ -1,11 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
-
-const inter = Noto_Sans_KR({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +13,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

@@ -22,7 +22,7 @@ export const Nav = ({ slideIndex }: NavProps) => {
           onClick={() => {
             swiper.slideTo(0);
           }}
-          className={`text-2xl text-black cursor-pointer transition-colors duration-100 font-semibold opacity-70 ${
+          className={`text-2xl text-black cursor-pointer transition-colors duration-100 font-bold opacity-70 ${
             slideIndex === 0 ? "md:text-white" : "md:text-black"
           }`}
         >
@@ -38,18 +38,25 @@ export const Nav = ({ slideIndex }: NavProps) => {
               onClick={() => {
                 swiper.slideTo(1);
               }}
-              className="flex items-center cursor-pointer px-5 justify-center font-semibold"
+              className="flex items-center cursor-pointer px-5 justify-center font-bold"
             >
-              About
+              Archiving
             </li>
-
             <li
               onClick={() => {
                 swiper.slideTo(2);
               }}
-              className="flex items-center cursor-pointer px-5 justify-center font-semibold"
+              className="flex items-center cursor-pointer px-5 justify-center font-bold"
             >
-              Archiving
+              Projects
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(3);
+              }}
+              className="flex items-center cursor-pointer px-5 justify-center font-bold"
+            >
+              Career
             </li>
           </ul>
         </nav>
@@ -101,7 +108,7 @@ export const Nav = ({ slideIndex }: NavProps) => {
             }}
             className="font-bold cursor-pointer"
           >
-            About
+            Archiving
           </li>
           <li
             onClick={() => {
@@ -109,7 +116,15 @@ export const Nav = ({ slideIndex }: NavProps) => {
             }}
             className="font-bold cursor-pointer"
           >
-            Archiving
+            Projects
+          </li>
+          <li
+            onClick={() => {
+              swiper.slideTo(3);
+            }}
+            className="font-bold cursor-pointer"
+          >
+            Career
           </li>
         </ul>
       </nav>
