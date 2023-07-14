@@ -24,3 +24,18 @@ body {
   transform: none;
   opacity: 1;
 }
+
+.archiving .swiper-button-next {
+  top: 55%;
+  right: 10px;
+}
+
+.archiving .swiper-button-prev {
+  top: 55%;
+  left: 10px;
+}
+
+.archiving .swiper-pagination {
+  position: relative;
+  margin-top: 25px;
+}
