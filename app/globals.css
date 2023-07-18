@@ -26,16 +26,47 @@ body {
 }
 
 .archiving .swiper-button-next {
-  top: 55%;
-  right: 10px;
+  top: 42%;
+  right: -35px;
 }
 
 .archiving .swiper-button-prev {
-  top: 55%;
-  left: 10px;
+  top: 42%;
+  left: -35px;
 }
 
 .archiving .swiper-pagination {
   position: relative;
   margin-top: 25px;
+}
+
+.projects .swiper-button-next {
+  top: 45%;
+  right: -45px;
+  color: white;
+}
+
+.projects .swiper-button-prev {
+  top: 45%;
+  left: -45px;
+  color: white;
+}
+
+.projects .swiper-pagination {
+  position: relative;
+  margin-top: 25px;
+}
+
+.projects .swiper-pagination-bullet {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .projects .swiper-button-next {
+    right: -35px;
+  }
+
+  .projects .swiper-button-prev {
+    left: -35px;
+  }
 }
