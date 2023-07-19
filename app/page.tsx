@@ -14,6 +14,8 @@ import { SectionLayout } from "./components/section-layout";
 import { GithubComponent } from "./components/achiving/github";
 import { TistoryComponent } from "./components/achiving/tistory";
 import { DolimpanComponent } from "./components/projects/dolimpan";
+import { SetTimerComponents } from "./components/projects/setTimer";
+import { BlueArchiveComponent } from "./components/projects/blueArchive";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -88,8 +90,12 @@ export default function Home() {
             <SwiperSlide>
               <DolimpanComponent />
             </SwiperSlide>
-            <SwiperSlide></SwiperSlide>
-            <SwiperSlide></SwiperSlide>
+            <SwiperSlide>
+              <SetTimerComponents />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlueArchiveComponent />
+            </SwiperSlide>
             <SwiperSlide></SwiperSlide>
           </Swiper>
         </SectionLayout>

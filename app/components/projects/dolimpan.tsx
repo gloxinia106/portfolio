@@ -10,7 +10,7 @@ export const DolimpanComponent = () => {
       useTech="HTML, JavaScript, CSS, Gulp"
     >
       <p>
-        <strong>복볼복 돌림판 웹사이트 입니다. </strong>
+        <strong>복볼복 돌림판 웹사이트입니다. </strong>
         돌린판 크롬 확장 프로그램을 보고 크롬말고 다른 브라우저 또는 다른
         모바일에서 있었으면 좋겠다라고 생각해서 개발하게 되었습니다.
       </p>

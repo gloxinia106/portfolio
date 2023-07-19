@@ -20,14 +20,14 @@ export const ProjectsLayout = ({
   return (
     <div className="bg-white py-7 px-7 rounded-xl h-[55vh]">
       <div className="flex flex-col md:flex-row h-full gap-7 ">
-        <div className="hidden md:block flex-1">
-          <img className="max-h-full object-cover" src={imgSrc} />
+        <div className="hidden md:block flex-1 bg-black">
+          <img className="h-full object-cover mx-auto" src={imgSrc} />
         </div>
         <div className="flex-1">
-          <h1 className="text-2xl sm:text-3xl w-full text-center font-bold">
+          <h1 className="text-2xl lg:text-3xl w-full text-center font-bold">
             {title}
           </h1>
-          <div className="mt-5 text-sm sm:text-base space-y-2">{children}</div>
+          <div className="mt-5 text-sm lg:text-base space-y-2">{children}</div>
           <div
             className={
               "block md:grid grid-cols-[1fr_4fr] mt-7 gap-y-2 text-sm md:text-base"
