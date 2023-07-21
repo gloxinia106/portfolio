@@ -1,6 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper/types";
 import { Pagination, Mousewheel, Keyboard, Navigation } from "swiper/modules";
 import { HomeSection } from "@/app/components/section/home-section";
 
@@ -18,6 +19,7 @@ import { SetTimerComponents } from "./components/projects/setTimer";
 import { BlueArchiveComponent } from "./components/projects/blueArchive";
 import { PortFolioComponent } from "./components/projects/portfolio";
 import { QquizzesComponent } from "./components/projects/qquizzes";
+import { CareerSection } from "./components/section/career-section";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -37,6 +39,25 @@ export default function Home() {
     });
   }, []);
 
+  const handleScroll = (swiper: SwiperType) => {
+    const lastPage = document.querySelector(".last-page")!;
+    const handleScrollEvent = () => {
+      if (lastPage.scrollTop === 0) {
+        swiper.mousewheel.enable();
+        lastPage.removeEventListener("scroll", handleScrollEvent);
+      }
+    };
+
+    if (lastPage.scrollHeight > lastPage.clientHeight) {
+      if (swiper.isEnd) {
+        swiper.mousewheel.disable();
+        lastPage?.addEventListener("scroll", handleScrollEvent);
+      } else {
+        lastPage?.removeEventListener("scroll", handleScrollEvent);
+      }
+    }
+  };
+
   return (
     <Swiper
       direction="vertical"
@@ -47,6 +68,7 @@ export default function Home() {
       speed={800}
       onSlideChange={(swiper) => {
         setSlideIndex(swiper.activeIndex);
+        handleScroll(swiper);
       }}
       className="h-screen"
     >
@@ -107,7 +129,9 @@ export default function Home() {
           </Swiper>
         </SectionLayout>
       </SwiperSlide>
-      <SwiperSlide className="bg-neutral-100"></SwiperSlide>
+      <SwiperSlide className="bg-neutral-100 last-page">
+        <CareerSection />
+      </SwiperSlide>
     </Swiper>
   );
 }
