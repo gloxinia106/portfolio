@@ -7,7 +7,7 @@ export const BlueArchiveComponent = () => {
       websiteUrl="https://earnest-beignet-b6f65b.netlify.app"
       imgSrc="/projects/blueArchive.png"
       title="블루아카 이벤트 페이지"
-      useTech="Swiper, Nextjs, tailwindCSS"
+      useTech="Swiper, Nextjs, TailwindCSS"
     >
       <p>
         <strong>

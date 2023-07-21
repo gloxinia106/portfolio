@@ -16,6 +16,8 @@ import { TistoryComponent } from "./components/achiving/tistory";
 import { DolimpanComponent } from "./components/projects/dolimpan";
 import { SetTimerComponents } from "./components/projects/setTimer";
 import { BlueArchiveComponent } from "./components/projects/blueArchive";
+import { PortFolioComponent } from "./components/projects/portfolio";
+import { QquizzesComponent } from "./components/projects/qquizzes";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -96,11 +98,16 @@ export default function Home() {
             <SwiperSlide>
               <BlueArchiveComponent />
             </SwiperSlide>
-            <SwiperSlide></SwiperSlide>
+            <SwiperSlide>
+              <PortFolioComponent />
+            </SwiperSlide>
+            <SwiperSlide>
+              <QquizzesComponent />
+            </SwiperSlide>
           </Swiper>
         </SectionLayout>
       </SwiperSlide>
-      <SwiperSlide></SwiperSlide>
+      <SwiperSlide className="bg-neutral-100"></SwiperSlide>
     </Swiper>
   );
 }

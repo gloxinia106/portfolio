@@ -7,7 +7,7 @@ export const SetTimerComponents = () => {
       websiteUrl="https://setimer.netlify.app"
       imgSrc="/projects/setTimer.png"
       title="운동 인터벌 타이머"
-      useTech="PWA, Nextjs, TypeScript, tailwindCSS"
+      useTech="PWA, Nextjs, TypeScript, TailwindCSS"
     >
       <p>
         <strong>타바타 운동을 위한 인터벌 타이머 웹사이트입니다. </strong>
