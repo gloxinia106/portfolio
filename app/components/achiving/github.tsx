@@ -11,11 +11,11 @@ export const GithubComponent = () => {
       >
         github.com/gloxinia106
       </a>
-      <div className="font-medium">소스코드 보관소입니다.</div>
+      <div className="font-medium">소스 코드 보관소입니다.</div>
       <ul className="space-y-1 ">
-        <li>사이드 프로젝트들의 소스코드</li>
-        <li>알고리즘을 공부하기 위해 작성한 소스코드</li>
-        <li>대학교 프로젝트의 소스코드</li>
+        <li>사이드 프로젝트들의 소스 코드</li>
+        <li>알고리즘을 공부하기 위해 작성한 소스 코드</li>
+        <li>대학교 프로젝트의 소스 코드</li>
       </ul>
     </div>
   );
