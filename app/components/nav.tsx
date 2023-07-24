@@ -26,7 +26,7 @@ export const Nav = ({ slideIndex }: NavProps) => {
             slideIndex === 0 ? "md:text-white" : "md:text-black"
           }`}
         >
-          CJH's Portfolio
+          CJH&apos;s Portfolio
         </div>
         <nav>
           <ul
