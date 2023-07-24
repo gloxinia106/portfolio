@@ -4,7 +4,7 @@ export const PortFolioComponent = () => {
   return (
     <ProjectsLayout
       imgSrc="/projects/portfolio.png"
-      websiteUrl="localhost"
+      websiteUrl="https://portfolio-cjh.vercel.app"
       title="포트폴리오 사이트"
       githubUrl="https://github.com/gloxinia106/portfolio"
       useTech="Nextjs, TypeScript, TailwindCSS, Swiper"
