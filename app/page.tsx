@@ -1,7 +1,6 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperType } from "swiper/types";
 import { Pagination, Mousewheel, Keyboard, Navigation } from "swiper/modules";
 import { HomeSection } from "@/app/components/section/home-section";
 
@@ -39,25 +38,6 @@ export default function Home() {
     });
   }, []);
 
-  const handleScroll = (swiper: SwiperType) => {
-    const lastPage = document.querySelector(".last-page")!;
-    const handleScrollEvent = () => {
-      if (lastPage.scrollTop === 0) {
-        swiper.mousewheel.enable();
-        lastPage.removeEventListener("scroll", handleScrollEvent);
-      }
-    };
-
-    if (lastPage.scrollHeight > lastPage.clientHeight) {
-      if (swiper.isEnd) {
-        swiper.mousewheel.disable();
-        lastPage?.addEventListener("scroll", handleScrollEvent);
-      } else {
-        lastPage?.removeEventListener("scroll", handleScrollEvent);
-      }
-    }
-  };
-
   return (
     <Swiper
       direction="vertical"
@@ -68,7 +48,6 @@ export default function Home() {
       speed={800}
       onSlideChange={(swiper) => {
         setSlideIndex(swiper.activeIndex);
-        handleScroll(swiper);
       }}
       className="h-screen"
     >
